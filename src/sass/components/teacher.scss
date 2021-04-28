@@ -1,0 +1,178 @@
+.teacher {
+  position: relative;
+  padding-top: rem(280);
+  padding-bottom: rem(50);
+  @include for-size(tablet) {
+    padding-top: rem(236);
+    padding-bottom: rem(60);
+  }
+  @include for-size(desktop) {
+    padding-top: rem(45);
+    padding-bottom: rem(90);
+  }
+  @include for-size(hd-desktop) {
+    padding-top: rem(300);
+    padding-bottom: rem(130);
+  }
+}
+
+.sections-title,
+.teacher-name {
+  margin: 0;
+  margin-bottom: rem(24);
+}
+
+.sections-title {
+  @include for-size(tablet) {
+    margin-bottom: rem(30);
+  }
+  @include for-size(desktop) {
+    margin-bottom: rem(50);
+  }
+  @include for-size(hd-desktop) {
+    margin-bottom: rem(70);
+  }
+}
+
+.teacher-wrapper {
+  @include for-size(tablet) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.photo-wrap {
+  display: flex;
+  margin-bottom: rem(24);
+  @include for-size(tablet) {
+    margin: 0;
+    margin-right: rem(46);
+  }
+  @include for-size(desktop) {
+    margin-right: rem(86);
+  }
+}
+
+.teacher-photo {
+  box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.21);
+}
+
+.teacher-info {
+  flex: 0 0 50%;
+  @include for-size(tablet) {
+    width: rem(400);
+  }
+  @include for-size(desktop) {
+    width: rem(636);
+  }
+  @include for-size(hd-desktop) {
+    max-width: rem(676);
+  }
+}
+
+.teacher-name {
+  font-weight: 800;
+  border-bottom: rem(1) solid rgba(133, 133, 133, 0.38);
+  line-height: rem(29.17);
+  font-size: rem(16);
+  @include for-size(tablet) {
+    margin-bottom: rem(20);
+    font-size: rem(20);
+  }
+  @include for-size(desktop) {
+    margin-bottom: rem(34);
+    font-size: rem(29.17);
+  }
+}
+
+.skill-list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: rem(18);
+  @include for-size(desktop) {
+    max-width: rem(480);
+    margin-bottom: rem(34);
+  }
+}
+
+.skill-list:first-child {
+  letter-spacing: rem(7);
+}
+
+.skill-list__item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.skill-list__item:not(:last-child) {
+  margin-bottom: rem(24);
+}
+
+.skill-list__item:hover .skill-list__img {
+  transform: scale(1.7);
+}
+
+.skill-list__description {
+  padding-left: rem(20);
+  font-size: rem(13);
+  color: $black-color-s;
+  font-weight: 600;
+  line-height: rem(20);
+  margin: 0;
+  @include for-size(tablet) {
+    line-height: rem(20);
+  }
+  @include for-size(desktop) {
+    font-size: rem(16.67);
+    line-height: rem(29.17);
+  }
+}
+
+.skill-list__img {
+  width: rem(18);
+  height: rem(18);
+  fill: $orange-color;
+  transition: 0.2s;
+}
+
+.description-wrapper {
+  position: relative;
+  padding-top: rem(18);
+  @include for-size(desktop) {
+    padding-top: rem(34);
+  }
+}
+
+.description-wrapper::before {
+  @include pseudo(rem(25), rem(2));
+  position: absolute;
+  background-color: $orange-color;
+  top: 0;
+  transition: 0.3s;
+}
+
+.description-wrapper:hover::before {
+  width: 100%;
+}
+
+.teacher-description {
+  margin: 0;
+  margin-bottom: rem(16);
+}
+
+.teacher__link {
+  all: unset;
+  text-decoration: underline;
+  cursor: pointer;
+  color: $orange-color;
+}
+
+.teacher-description,
+.teacher__link {
+  font-size: rem(11);
+  line-height: rem(20);
+  @include for-size(desktop) {
+    font-size: rem(16.67);
+    line-height: rem(29.17);
+  }
+}

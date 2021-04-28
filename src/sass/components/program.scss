@@ -1,0 +1,199 @@
+h3,
+h4 {
+  margin: 0;
+}
+
+.program__list,
+.program__sub-list,
+.program__sub-sub-list {
+  padding: 0;
+}
+
+.border-wrapper {
+  margin-bottom: 40px;
+
+  @include for-size(desktop) {
+    margin-bottom: 47px;
+    padding-bottom: 42px;
+    border-bottom: 2px solid #546264;
+  }
+  @include for-size(hd-desktop) {
+    margin-bottom: 64px;
+    padding-bottom: 87px;
+  }
+}
+
+.program {
+  background-color: $black-color-s;
+  background-image: url(../images/program/program-m.png);
+  background-repeat: no-repeat;
+  background-position: right 83%;
+  position: relative;
+  padding-top: 53px;
+  padding-bottom: 440px;
+
+  .program-title {
+    @include for-size(mobile) {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:nth-last-of-type(n + 2)::before {
+      content: '';
+      width: rem(2);
+      height: 110%;
+      background-color: #546264;
+      position: absolute;
+      top: 15px;
+      left: -30px;
+
+      @include for-size(desktop) {
+        display: none;
+      }
+    }
+
+    &::after {
+      @include pseudo(14px, 14px);
+      position: absolute;
+      background-color: $orange-color;
+      left: -36px;
+      top: 0;
+      border-radius: 50%;
+
+      @include for-size(desktop) {
+        left: 0;
+        top: -55px;
+      }
+
+      @include for-size(hd-desktop) {
+        top: -72px;
+      }
+    }
+
+    @include for-size(desktop) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @include for-size(tablet) {
+    background-image: url(../images/program/program-t.png);
+    background-position: right 80.08%;
+    padding-top: 67px;
+  }
+  @include for-size(desktop) {
+    background-image: url(../images/program/program-d.png);
+    background-position: left 70%;
+    padding-top: 80px;
+  }
+  @include for-size(hd-desktop) {
+    background-image: url(../images/program/program-xd.png);
+    background-position: left 96.1%;
+    padding-top: 130px;
+  }
+}
+
+.program__list {
+  padding-left: 110px;
+  list-style-type: none;
+  counter-reset: program-counter;
+
+  &-title {
+    margin-bottom: 28px;
+    font-size: 15px;
+    text-transform: uppercase;
+    @include for-size(desktop) {
+      font-size: 19px;
+    }
+    @include for-size(hd-desktop) {
+      font-size: 21px;
+    }
+    &::before {
+      content: counter(program-counter) ' ';
+      counter-increment: program-counter;
+      color: $white-color;
+      @include for-size(hd-desktop) {
+        font-size: rem(30);
+      }
+    }
+  }
+
+  @include for-size(desktop) {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.program__sub-list {
+  margin-bottom: 38px;
+  @include for-size(tablet) {
+    display: flex;
+  }
+
+  @include for-size(desktop) {
+    flex-direction: column;
+  }
+}
+
+.program__sub-item {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &-title {
+    margin-left: 35px;
+    font-size: 13px;
+    margin-bottom: 22px;
+    @include for-size(desktop) {
+      font-size: 18px;
+    }
+    @include for-size(hd-desktop) {
+      font-size: 21px;
+    }
+  }
+
+  @include for-size(tablet) {
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    width: 150px;
+
+    @include for-size(desktop) {
+      width: 200px;
+    }
+  }
+}
+
+.program__sub-sub-list {
+  font-size: 11px;
+
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @include for-size(desktop) {
+    font-size: 15px;
+  }
+  @include for-size(hd-desktop) {
+    font-size: 19px;
+  }
+}
+
+.program__orange-font {
+  background: linear-gradient(
+    rgba(255, 107, 8, 1) 0%,
+    rgba(255, 107, 8, 1) 42%,
+    rgba(208, 0, 184, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0b2349;
+  display: table;
+}

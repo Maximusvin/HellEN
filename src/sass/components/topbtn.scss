@@ -1,0 +1,27 @@
+.topbtn {
+  position: relative;
+}
+
+.to-header-btn {
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  right: 15px;
+  bottom: 50px;
+  z-index: 30;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  // background-color: rgba(255, 107, 8, 0.6);
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+.to-header-btn__img {
+  width: rem(40);
+  height: rem(40);
+  fill: $accent-orange-color;
+}

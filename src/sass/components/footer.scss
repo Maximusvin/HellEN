@@ -1,0 +1,135 @@
+.page-footer {
+  @include for-size(mobile) {
+    padding-top: rem(28);
+
+    &__container {
+      margin-bottom: rem(16);
+    }
+
+    &__item:not(:last-of-type) {
+      margin-bottom: rem(20);
+    }
+  }
+  @include for-size(tablet) {
+    padding-top: rem(35);
+
+    &__container {
+      margin-bottom: rem(40);
+    }
+  }
+  @include for-size(desktop) {
+    padding-top: rem(52);
+
+    &__container {
+      margin-bottom: rem(52);
+    }
+  }
+
+  &__list {
+    margin: rem(0);
+    padding: rem(0);
+
+    @include for-size(mobile) {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include for-size(tablet) {
+      @include flexible(space-between);
+      flex-direction: row-reverse;
+      max-width: 80%;
+    }
+    @include for-size(desktop) {
+      max-width: 68%;
+    }
+  }
+
+  &__item {
+    @include for-size(tablet) {
+      @include flexible(flex-start);
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: rem(38);
+    letter-spacing: 0.05em;
+    color: $black-color-s;
+
+    // &--pseudo::before {
+    //   display: inline-block;
+    //   @include pseudo(rem(32), rem(31));
+    //   background-image: url('../../images/footer/call.svg');
+    //   @include background-settings(no-repeat);
+    // }
+
+    @include for-size(mobile) {
+      &:not(:last-of-type) {
+        margin-bottom: rem(20);
+      }
+
+      &--center {
+        max-width: max-content;
+        margin: 0 auto;
+      }
+    }
+    @include for-size(tablet) {
+      font-size: rem(20);
+
+      &:not(:last-of-type) {
+        margin-right: rem(60);
+      }
+
+      &--pseudo::after {
+        @include pseudo(rem(1), rem(29));
+        position: absolute;
+        top: rem(10);
+        right: rem(-30);
+        background-color: rgb(224, 224, 224);
+      }
+    }
+    @include for-size(desktop) {
+      font-size: rem(28);
+
+      &--pseudo::before {
+        @include pseudo(rem(32), rem(32));
+      }
+    }
+  }
+}
+
+.sub-footer {
+  background-color: $black-color-s;
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+
+  &__copy {
+    margin: rem(0);
+    font-weight: 500;
+    font-size: rem(11);
+    line-height: rem(38);
+    color: rgba(253, 254, 254, 0.42);
+    letter-spacing: 0.05em;
+    text-align: center;
+
+    @include for-size(tablet) {
+      text-align: left;
+    }
+
+    @include for-size(desktop) {
+      font-size: rem(14);
+    }
+  }
+}
+
+.footer-svg {
+  width: rem(32);
+  height: rem(32);
+  fill: $orange-color;
+  margin-right: rem(7);
+}

@@ -1,0 +1,152 @@
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.container {
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0 auto;
+
+  @include for-size(tablet) {
+    max-width: rem(718);
+  }
+
+  @include for-size(desktop) {
+    max-width: rem(1240);
+  }
+
+  @include for-size(hd-desktop) {
+    max-width: rem(1372);
+  }
+}
+
+// class for button, change sizes and font-sizes
+.btn {
+  @include flexible(center);
+  align-items: center;
+  border: rem(2) solid $orange-color;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $orange-color;
+  width: rem(250);
+  height: rem(48);
+  font-size: rem(11);
+  font-family: $second-font;
+  cursor: pointer;
+
+  @include for-size(desktop) {
+    width: rem(300);
+    height: rem(68);
+    font-size: rem(12);
+  }
+
+  @include for-size(hd-desktop) {
+    width: rem(350);
+    font-size: rem(14);
+  }
+}
+
+// font-color-class
+.black-font-m {
+  color: $black-color-m;
+}
+
+.black-font-s {
+  color: $black-color-s;
+}
+
+.orange-font {
+  color: $orange-color;
+}
+
+.white-font {
+  color: $white-color;
+}
+
+.grey-font {
+  color: $grey-color;
+}
+
+//hover
+.orange-hover {
+  &:hover {
+    background-color: $orange-color;
+    color: $white-color;
+  }
+}
+
+// pseudo-line
+.pseudo-line:before {
+  @include pseudo(rem(25), rem(2));
+  position: absolute;
+  background-color: $orange-color;
+  top: 50%;
+  left: rem(-35);
+  transform: translateY(-50%);
+}
+
+.pseudo-line-title::after {
+  @include pseudo(rem(25), rem(2));
+  display: block;
+  margin: 0 auto;
+  background-color: $orange-color;
+  margin-top: rem(16);
+
+  @include for-size(desktop) {
+    margin-top: rem(6);
+  }
+}
+
+//titles
+.title {
+  font-size: rem(20);
+  font-weight: 800;
+  line-height: rem(33);
+  letter-spacing: 0.05em;
+
+  @include for-size(tablet) {
+    font-size: rem(26);
+    line-height: rem(33);
+  }
+
+  @include for-size(desktop) {
+    line-height: rem(31.25);
+    font-size: rem(42);
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: rem(45.83);
+  }
+}
+
+.subtitle {
+  font-size: rem(13);
+  line-height: rem(20);
+  font-weight: 700;
+
+  @include for-size(tablet) {
+    font-size: rem(13);
+    line-height: rem(20);
+    font-weight: 700;
+  }
+
+  @include for-size(desktop) {
+    font-size: rem(18);
+    line-height: rem(29.17);
+  }
+
+  @include for-size(hd-desktop) {
+    font-size: rem(20.83);
+    line-height: rem(29.17);
+  }
+}

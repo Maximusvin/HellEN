@@ -1,0 +1,145 @@
+<header class="header" id="header">
+  <nav class="navigation container">
+    //= ./logo.html
+    <ul class="menu">
+      <li class="menu__item">
+        <a href="#program" class="menu__link">
+          <span>Программа обучения</span></a
+        >
+      </li>
+      <li class="menu__item">
+        <a href="#teacher" class="menu__link"><span>О нас</span></a>
+      </li>
+      <li class="menu__item">
+        <a href="#about" class="menu__link"><span>Варианты обучения</span></a>
+      </li>
+      <li class="menu__item">
+        <a href="#registration" class="menu__link"><span>Контакты</span></a>
+      </li>
+    </ul>
+    <a href="#registration" class="header__btn btn">Консультация по телефону</a>
+
+    <div class="burger">
+      <div class="burger__wrap container">
+        //= ./logo.html
+        <ul class="menu menu--burger">
+          <li class="menu__item">
+            <a href="#program" class="menu__link">Программа обучения</a>
+          </li>
+          <li class="menu__item">
+            <a href="#teacher" class="menu__link">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a href="#about" class="menu__link">Варианты обучения</a>
+          </li>
+          <li class="menu__item">
+            <a href="#registration" class="menu__link">Контакты</a>
+          </li>
+        </ul>
+        <a href="#registration" class="burger__btn btn"
+          >Консультация по телефону</a
+        >
+      </div>
+    </div>
+
+    <div class="burger--btn">
+      <div class="header__burger">
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero">
+      <div class="hero__offer">
+        <h1 class="hero__title">
+          Комплексная <span class="hero__title-span">подготовка к ВНО</span> по
+          английскому языку
+        </h1>
+        <p class="hero__text">Просто не будет.</p>
+        <p class="hero__subtitle">
+          Но ты гарантировано наберешь
+          <span class="orange-font">+25 баллов</span>
+        </p>
+        <a href="#registration" class="hero__btn btn">
+          Консультация по телефону
+        </a>
+      </div>
+      <picture class="hero__img">
+        <source
+          media="(min-width: 1680px)"
+          srcset="
+            ./images/header/header-img/header-xd-img.png       839w,
+            ./images/header/header-img/header-xd-img@1.5x.png 1258w,
+            ./images/header/header-img/header-xd-img@2x.png   1677w
+          "
+          sizes="839px"
+        />
+        <source
+          media="(min-width: 1280px)"
+          srcset="
+            ./images/header/header-img/header-d-img.png       685w,
+            ./images/header/header-img/header-d-img@1.5x.png 1027w,
+            ./images/header/header-img/header-d-img@2x.png   1369w
+          "
+          sizes="685px"
+        />
+        <source
+          media="(min-width: 576px)"
+          srcset="
+            ./images/header/header-img/header-t-img.png      370w,
+            ./images/header/header-img/header-t-img@1.5x.png 554w,
+            ./images/header/header-img/header-t-img@2x.png   739w
+          "
+          sizes="370px"
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ./images/header/header-img/header-m-img.png      215w,
+            ./images/header/header-img/header-m-img@1.5x.png 322w,
+            ./images/header/header-img/header-m-img@2x.png   430w
+          "
+          sizes="215px"
+        />
+        <img
+          src="./images/header/header-img/header-m-img.png"
+          alt="Подготовка к ВНО"
+        />
+      </picture>
+    </div>
+
+    <ul class="benefit">
+      <li class="benefit__item">
+        <div class="benefit__img-wrap">
+          <svg class="benefit__img">
+            <use href="./images/icon/sprite.svg#female_student"></use>
+          </svg>
+        </div>
+        <h3 class="benefit__title">
+          Адаптированная авторская программа ВНО
+        </h3>
+      </li>
+      <li class="benefit__item">
+        <div class="benefit__img-wrap">
+          <svg class="benefit__img">
+            <use href="./images/icon/sprite.svg#mobile_learning"></use>
+          </svg>
+        </div>
+        <h3 class="benefit__title">
+          Современные методики обучения
+        </h3>
+      </li>
+      <li class="benefit__item">
+        <div class="benefit__img-wrap">
+          <svg class="benefit__img">
+            <use href="./images/icon/sprite.svg#noun_insurance"></use>
+          </svg>
+        </div>
+        <h3 class="benefit__title">
+          Финансовая гарантия результата
+        </h3>
+      </li>
+    </ul>
+  </div>
+</header>
